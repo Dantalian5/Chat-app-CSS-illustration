@@ -1,0 +1,19 @@
+.flex{
+    display: flex;
+}
+
+.section {
+  max-width: 90rem;
+  padding-inline: 2rem;
+}
+.header {
+  min-height: 100vh;
+  min-height: 100svh;
+  padding-block: 4rem;
+}
+.hero{
+    flex-direction: column;
+    gap: 4rem;
+    align-items: center;
+}
+
