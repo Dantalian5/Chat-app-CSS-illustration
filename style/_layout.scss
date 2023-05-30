@@ -4,7 +4,7 @@
 
 .section {
   max-width: 90rem;
-  padding-inline: 2rem;
+  padding-inline: 8.5%;
   overflow: hidden;
 }
 .header {
@@ -12,6 +12,8 @@
   min-height: 100svh;
   padding-block: 4rem;
   position: relative;
+  align-items: center;
+  justify-content: center;
   &::before {
     content: "";
     position: absolute;
@@ -40,7 +42,19 @@
   }
 }
 .hero {
-  flex-direction: column;
+  width: 100%;
+  flex-flow: row wrap;
   gap: 4rem;
   align-items: center;
+  justify-content: center;
+  &__img {
+    flex: 0 1 auto;
+  }
+  &__info {
+    flex: 1 1 18.75rem;
+    max-width: 27.8125rem;
+    &__title {
+      margin-bottom: 1.5rem;
+    }
+  }
 }

@@ -10,89 +10,74 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
-
-  <header class="section header" aria-label="header">
+  <header class="section header flex" aria-label="header">
     <div class="hero flex">
       <div class="hero__img">
-        <div class="mobile">
-          <div class="mobile__outer-box">
-            <div class="mobile__inner-box flex">
-              <div class="mobile__header">
-                <div class="app-header flex">
-                  <div class="app-header__arrow">
-                    <svg 
-                    viewBox="0 0 300 100"
-                    xmlns="http://www.w3.org/2000/svg"
-                    stroke="red"
-                     fill="grey">
-                     <circle cx="50" cy="50" r="40" />
-                     <circle cx="150" cy="50" r="4" />
-                    
-                  </svg>
-                  </div>
-                  <div class="app-header__info flex">
-                    <div class="app-header__info__avatar">
-                      <img src="assets/avatar.jpg" alt="avatar">
+        <div class="phone">
+          <div class="phone__outer">
+            <div class="phone__inner">
+              <div class="app">
+                <div class="app__header">
+                  <div class="app__header__wrapper flex">
+                    <div class="app__header__arrow"></div>
+                    <div class="app__header__info flex">
+                      <div class="app__header__info__avatar">
+                        <img src="assets/avatar.jpg" alt="avatar">
+                      </div>
+                      <div class="app__header__info__ID">
+                        <p class="app__header__info__ID--name">Samuel Green</p>
+                        <p class="app__header__info__ID--status">Available to Walk</p>
+                      </div>
                     </div>
-                    <div class="app-header__info__ID">
-                      <p class="app-header__info__ID--name">Samuel Green</p>
-                      <p class="app-header__info__ID--state"> Available to Walk</p>
+                    <div class="app__header__menu flex">
+                      <div class="app__header__menu__item"></div>
+                      <div class="app__header__menu__item"></div>
+                      <div class="app__header__menu__item"></div>
                     </div>
+                  </div>                  
+                </div>
+                <div class="app__body flex">
+                  <div class="app__message-typer flex">
+                    <p class="app-text app__message-typer__text">Type a message…</p>
+                    <div class="app__message-typer__button"></div>
                   </div>
-                  <div class="app-header__menu flex">
-                    <div class="app-header__menu--items"></div>
-                    <div class="app-header__menu--items"></div>
-                    <div class="app-header__menu--items"></div>
+                  <div class="app__msg app__msg--left app__msg--sended app__msg--special">
+                    <p class="app__msg__form flex">1 hour walk <span>$49</span></p>
+                  </div>
+                  <div class="app__msg app__msg--left app__msg--sended app__msg--special">
+                    <p class="app__msg__form flex">30 minute walk <span>$29</span></p>
+                  </div>
+                  <div class="app__msg app__msg--left app__msg--sended">
+                    <p class="app__msg__text">She looks so happy! The time we discussed works. How long shall I take her out for?</p>
+                  </div>
+                  <div class="app__msg app__msg--arrived app__msg--right">
+                    <p class="app__msg__text">Can you make it?</p>
+                  </div>
+                  <div class="app__msg app__msg--arrived app__msg--right">
+                    <p class="app__msg__text">Here are a few pictures. She’s a happy girl!</p>
+                  </div>
+                  <div class="app__msg app__msg--right app__msg__info flex">
+                    <img class="app__msg__info__item" src="assets/dog-image-1.jpg" alt="a litle dog">
+                    <img class="app__msg__info__item" src="assets/dog-image-2.jpg" alt="a litle dog">
+                    <img class="app__msg__info__item" src="assets/dog-image-3.jpg" alt="a litle dog">
+                  </div>
+                  <div class="app__msg app__msg--left app__msg--sended">
+                    <p class="app__msg__text">Could you send over some pictures of your dog, please?</p>
+                  </div>
+                  <div class="app__msg app__msg--left app__msg--sended">
+                    <p class="app__msg__text">That sounds great. I’d be happy to discuss more.</p>
                   </div>
                 </div>
-              </div>
-              <div class="mobile__app flex">
-                <div class="app__message-typer flex">
-                  <p class="app-text app__message-typer__text">Type a message…</p>
-                  <div class="app__message-typer__button"></div>
-                </div>
-                <p class="app__text-bubble app__text-bubble--left app__text-bubble--price flex">
-                  1 hour walk
-                  <span class="app__text-bubble--price--number">$49</span>
-                </p>
-                <p class="app__text-bubble app__text-bubble--left app__text-bubble--price flex">
-                  30 minute walk
-                  <span class="app__text-bubble--price--number">$29</span>
-                </p>
-                <p class="app__text-bubble app__text-bubble--left"> 
-                   She looks so happy! The time we discussed works. How long shall I take her out for?
-                </p>
-                <p class="app__text-bubble app__text-bubble--right">  
-                  Can you make it?
-                </p>
-                <p class="app__text-bubble app__text-bubble--right">
-                  Here are a few pictures. She’s a happy girl!
-                </p>
-                <div class="app__info-bubble flex app__info-bubble--right">
-                  <img class="app__info-bubble__item" src="assets/dog-image-1.jpg" alt="a litle dog">
-                  <img class="app__info-bubble__item" src="assets/dog-image-2.jpg" alt="a litle dog">
-                  <img class="app__info-bubble__item" src="assets/dog-image-3.jpg" alt="a litle dog">
-                </div>
-                <p class="app__text-bubble app__text-bubble--left">
-                  Could you send over some pictures of your dog, please?
-                </p>
-                <p class="app__text-bubble app__text-bubble--left">
-                  That sounds great. I’d be happy with that.               
-                </p>
-              </div>
+              </div>            
             </div>
           </div>
         </div>
       </div>
       <main class="hero__info" aria-label="main_info">
         <div>
-          <h1 class="title">Simple booking</h1>
+          <h1 class="title hero__info__title">Simple booking</h1>
         </div>
         <div>
           <p class="text">Stay in touch with our dog walkers through the chat interface. This makes it easy to 
@@ -102,10 +87,5 @@
       </main>
     </div>
   </header>
-
- <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
 </body>
 </html>
