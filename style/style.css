@@ -115,8 +115,9 @@ body {
   height: 63.625rem;
   background: linear-gradient(225deg, #e844ff 0%, #8739ff 100%);
   border-radius: 255px;
-  left: -322px;
-  top: -509px;
+  right: min(150% - 23.4375rem, 50% + 21.875rem);
+  top: calc(45% + 25vw);
+  transform: translate(0%, -100%);
   z-index: -1;
 }
 .header::after {
@@ -124,8 +125,8 @@ body {
   position: absolute;
   width: 510px;
   height: 1018px;
-  left: 188px;
-  top: 427px;
+  left: min(150% - 23.4375rem, 50% + 21.875rem);
+  top: calc(55% - 25vw);
   background: linear-gradient(225deg, #e844ff 0%, #8739ff 100%);
   mix-blend-mode: normal;
   opacity: 0.03;
@@ -137,7 +138,7 @@ body {
 .hero {
   width: 100%;
   flex-flow: row wrap;
-  gap: 4rem;
+  gap: 4rem 7.8125rem;
   align-items: center;
   justify-content: center;
 }
