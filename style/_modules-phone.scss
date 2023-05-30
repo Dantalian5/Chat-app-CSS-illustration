@@ -1,0 +1,254 @@
+//----------------------------------------------------------
+//---drawing the phone------
+.phone {
+  font-family: $font-family-rubik;
+  width: fit-content;
+  max-width: fit-content;
+  &__outer {
+    position: relative;
+    width: 15.4375rem;
+    height: 31.5625rem;
+    border-radius: 1.875rem;
+    background: $c-white;
+    box-shadow: 0rem 1.875rem 3.75rem -0.625rem rgba(62, 39, 83, 0.251202);
+    padding: 0.6875rem 0.5938rem;
+    z-index: 0;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 8.0625rem;
+      height: 1.8125rem;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, 0);
+      border-radius: 0rem 0rem 0.875rem 0.875rem;
+      background: $c-white;
+      z-index: 10;
+    }
+  }
+  &__inner {
+    width: 100%;
+    height: 100%;
+    border-radius: 1.25rem;
+    background: $c-Light-Grayish-Violet;
+    overflow: hidden;
+  }
+}
+//------- drawing the app
+.app {
+  height: 100%;
+  position: relative;
+  &__header {
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 4.125rem;
+    background: linear-gradient(
+      225deg,
+      $c-g-Light-Magenta 0%,
+      $c-g-Light-Violet 100%
+    );
+    box-shadow: 0rem 0rem 0.8125rem rgba(62, 39, 83, 0.251202);
+    border-radius: 0 0 0.375rem 0.375rem;
+    z-index: 5;
+    padding: 1.875rem 1rem 0rem 1rem;
+    isolation: isolate;
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      inset: 100% 0 -10px 0;
+      background: linear-gradient(
+        0deg,
+        rgba($c-Light-Grayish-Violet, 0) 0%,
+        rgba($c-Light-Grayish-Violet, 1) 100%
+      ); 
+    }
+    &__wrapper {
+      align-items: center;
+      width: 100%;
+    }
+    &__arrow {
+      position: relative;
+      width: 0.25rem;
+      margin-right: 1rem;
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        width: 0.5rem;
+        height: 0.1563rem;
+        background: $c-white;
+        border-radius: 0.625rem;
+      }
+      &::before {
+        transform: rotate(120deg) translate(-35%, 0);
+      }
+      &::after {
+        transform: rotate(-120deg) translate(-35%, 0);
+      }
+    }
+    &__info {
+      align-items: center;
+      gap: 0.5rem;
+      &__avatar {
+        width: 1.5rem;
+        height: 1.5rem;
+        overflow: hidden;
+        border: 1px solid $c-white;
+        border-radius: 50%;
+        & img {
+          width: 100%;
+        }
+      }
+      &__ID {
+        &--name {
+          font-size: 0.6875rem;
+          font-weight: 500;
+          line-height: 0.8125rem;
+          color: $c-white;
+        }
+        &--status {
+          font-size: 0.5rem;
+          font-weight: 400;
+          line-height: 0.5625rem;
+          color: $c-Pale-Violet;
+        }
+      }
+    }
+    &__menu {
+      flex-direction: column;
+      gap: 0.0625rem;
+      align-items: center;
+      margin-left: auto;
+      &__item {
+        width: 0.125rem;
+        height: 0.125rem;
+        background: $c-white;
+        border-radius: 50%;
+      }
+    }
+  }
+  &__body {
+    height: 100%;
+    z-index: 2;
+    flex-direction: column-reverse;
+    overflow: hidden;
+    padding: 0.625rem 0.4688rem;
+  }
+  &__msg {
+    width: fit-content;
+    padding: 0.375rem 0.5rem;
+    border-radius: 0.625rem;
+    margin-top: 0.5rem;
+    font-size: 0.5rem;
+    font-weight: 400;
+    line-height: 0.6875rem;
+    &--left {
+      margin-right: auto;
+      border-bottom-left-radius: 0.25rem;
+    }
+    &--right {
+      margin-left: auto;
+      border-bottom-right-radius: 0.25rem;
+    }
+    &--sended {
+      background: hsl(276, 41%, 93%);
+      color: $c-Moderate-Violet;
+    }
+    &--arrived {
+      box-shadow: 0px 10px 5px -5px rgba(62, 39, 83, 0.045318);
+      background: $c-white;
+      color: $c-Desaturated-Dark-Violet;
+    }
+    &--special {
+      color: $c-white;
+      background: linear-gradient(
+        -225deg,
+        $c-g-Light-Magenta 0%,
+        $c-g-Light-Violet 100%
+      );
+    }
+    &__text {
+      max-width: 7rem;
+    }
+    &__form {
+      width: 8.5rem;
+      align-items: center;
+      margin-block: 0.25rem;
+      & > span {
+        font-size: 0.75rem;
+        font-weight: 700;
+        margin-inline: auto 0.5rem;
+      }
+      &::before {
+        content: "";
+        display: inline-block;
+        margin-right: 0.5rem;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        border: 1px solid $c-Very-Light-Magenta;
+        background-color: transparent;
+      }
+    }
+    &__info {
+      align-items: center;
+      gap: 0.5rem;
+      align-items: center;
+      padding: 0;
+      &__item {
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 0.625rem;
+        box-shadow: 0px 10px 5px -5px rgba(62, 39, 83, 0.045318);
+      }
+    }
+  }
+  &__message-typer {
+    width: 100%;
+    height: 2.125rem;
+    border-radius: 1rem;
+    background: $c-white;
+    align-items: center;
+    padding: 0.25rem;
+    margin-top: 0.5rem;
+    &__text {
+      margin-left: 1rem;
+      font-size: 0.5625rem;
+      font-weight: 400;
+      line-height: 120%;
+      letter-spacing: -0.006em;
+      color: $c-Grayish-Blue;
+    }
+    &__button {
+      margin-left: auto;
+      width: 1.5625rem;
+      height: 1.5625rem;
+      border-radius: 50%;
+      background: $c-Very-Dark-Desaturated-Violet;
+      position: relative;
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        width: 0.5rem;
+        height: 0.1563rem;
+        top: 45%;
+        left: 50%;
+        background: $c-white;
+        border-radius: 0.625rem;
+        z-index: 2;
+      }
+      &::before {
+        transform: rotate(45deg) translate(-50%, 40%);
+      }
+      &::after {
+        transform: rotate(-45deg) translate(-50%, -40%);
+      }
+    }
+  }
+}
+:not(.app__msg--left) + .app__msg--left,
+:not(.app__msg--right) + .app__msg--right {
+  margin-bottom: 0.5rem;
+}
