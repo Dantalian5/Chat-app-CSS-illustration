@@ -4,6 +4,8 @@
   font-family: $font-family-rubik;
   width: fit-content;
   max-width: fit-content;
+  position: relative;
+  animation: 3s backwards shrinkin;
   &__outer {
     position: relative;
     width: 15.4375rem;
@@ -39,6 +41,7 @@
   height: 100%;
   position: relative;
   &__header {
+    overflow: hidden;
     position: absolute;
     inset: 0 0 auto 0;
     height: 4.125rem;
@@ -48,10 +51,10 @@
       $c-g-Light-Violet 100%
     );
     box-shadow: 0rem 0rem 0.8125rem rgba(62, 39, 83, 0.251202);
-    border-radius: 0 0 0.375rem 0.375rem;
+    border-radius: 1.25rem 1.25rem 0.375rem 0.375rem;
     z-index: 5;
     padding: 1.875rem 1rem 0rem 1rem;
-    isolation: isolate;
+    animation: 3s backwards enterin-top;
     &::after {
       content: "";
       position: absolute;
@@ -61,7 +64,7 @@
         0deg,
         rgba($c-Light-Grayish-Violet, 0) 0%,
         rgba($c-Light-Grayish-Violet, 1) 100%
-      ); 
+      );
     }
     &__wrapper {
       align-items: center;
@@ -132,7 +135,6 @@
     height: 100%;
     z-index: 2;
     flex-direction: column-reverse;
-    overflow: hidden;
     padding: 0.625rem 0.4688rem;
   }
   &__msg {
@@ -143,6 +145,8 @@
     font-size: 0.5rem;
     font-weight: 400;
     line-height: 0.6875rem;
+    position: relative;
+    animation: 2s 4s backwards enterin;
     &--left {
       margin-right: auto;
       border-bottom-left-radius: 0.25rem;
@@ -212,6 +216,9 @@
     align-items: center;
     padding: 0.25rem;
     margin-top: 0.5rem;
+    animation: 3s 2s backwards growin;
+    position: relative;
+    overflow: hidden;
     &__text {
       margin-left: 1rem;
       font-size: 0.5625rem;
@@ -219,6 +226,7 @@
       line-height: 120%;
       letter-spacing: -0.006em;
       color: $c-Grayish-Blue;
+      min-width: max-content;
     }
     &__button {
       margin-left: auto;
@@ -226,7 +234,8 @@
       height: 1.5625rem;
       border-radius: 50%;
       background: $c-Very-Dark-Desaturated-Violet;
-      position: relative;
+      position: absolute;
+      right: 4px;
       &::before,
       &::after {
         content: "";

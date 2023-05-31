@@ -1,0 +1,54 @@
+.animation-enterin {
+  position: relative;
+  &__left {
+    animation-name: enterin;
+    animation-delay: 2s;
+    animation-duration: 2s;
+    animation-direction: alternate;
+    animation-fill-mode: backwards;
+    position: relative;
+  }
+}
+@keyframes shrinkin {
+  from {
+    transform: scale(3);
+    //top: -200%;
+    left: -200%;
+  }
+
+  to {
+    transform: scale(1);
+    //top: 0;
+    left: 0;
+  }
+}
+@keyframes enterin {
+  from {
+    transform: scale(2) rotateY(-90deg);
+    left: -100%;
+  }
+
+  to {
+    transform: scale(1) rotateY(0deg);
+    left: 0;
+  }
+}
+@keyframes enterin-top {
+  from {
+    top: -100%;
+  }
+
+  to {
+    top: 0;
+  }
+}
+@keyframes growin {
+  from {
+    width: 1.9375rem;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+

@@ -49,6 +49,7 @@
   justify-content: center;
   &__img {
     flex: 0 1 auto;
+    position: relative;
   }
   &__info {
     flex: 1 1 18.75rem;
@@ -61,3 +62,4 @@
 
 
 
+// ! make the animation
