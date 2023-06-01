@@ -5,7 +5,7 @@
   width: fit-content;
   max-width: fit-content;
   position: relative;
-  animation: 3s backwards shrinkin;
+  animation: 2s backwards shrinkin;
   &__outer {
     position: relative;
     width: 15.4375rem;
@@ -54,7 +54,7 @@
     border-radius: 1.25rem 1.25rem 0.375rem 0.375rem;
     z-index: 5;
     padding: 1.875rem 1rem 0rem 1rem;
-    animation: 3s backwards enterin-top;
+    animation: 2s backwards enterin-top;
     &::after {
       content: "";
       position: absolute;
@@ -136,9 +136,11 @@
     z-index: 2;
     flex-direction: column-reverse;
     padding: 0.625rem 0.4688rem;
+    counter-reset: reversed(msg);
   }
   &__msg {
-    width: fit-content;
+    max-width: fit-content;
+    max-height: min-content;
     padding: 0.375rem 0.5rem;
     border-radius: 0.625rem;
     margin-top: 0.5rem;
@@ -146,7 +148,8 @@
     font-weight: 400;
     line-height: 0.6875rem;
     position: relative;
-    animation: 2s 4s backwards enterin;
+    overflow: hidden;
+    animation: .7s ease-out backwards popping-up-width;
     &--left {
       margin-right: auto;
       border-bottom-left-radius: 0.25rem;
@@ -173,6 +176,7 @@
       );
     }
     &__text {
+      width: max-content;
       max-width: 7rem;
     }
     &__form {
@@ -216,7 +220,7 @@
     align-items: center;
     padding: 0.25rem;
     margin-top: 0.5rem;
-    animation: 3s 2s backwards growin;
+    animation: 2s 1s backwards growin;
     position: relative;
     overflow: hidden;
     &__text {

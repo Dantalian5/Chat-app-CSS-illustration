@@ -1,35 +1,17 @@
-.animation-enterin {
-  position: relative;
-  &__left {
-    animation-name: enterin;
-    animation-delay: 2s;
-    animation-duration: 2s;
-    animation-direction: alternate;
-    animation-fill-mode: backwards;
-    position: relative;
+
+:root {
+    --local-delay: 3s;
+    --local-time-response: .7s;
   }
-}
 @keyframes shrinkin {
   from {
     transform: scale(3);
-    //top: -200%;
-    left: -200%;
+    left: -400%;
   }
 
   to {
     transform: scale(1);
     //top: 0;
-    left: 0;
-  }
-}
-@keyframes enterin {
-  from {
-    transform: scale(2) rotateY(-90deg);
-    left: -100%;
-  }
-
-  to {
-    transform: scale(1) rotateY(0deg);
     left: 0;
   }
 }
@@ -51,4 +33,55 @@
     width: 100%;
   }
 }
+@keyframes enterin {
+  from {
+    transform: scale(2) rotateY(-90deg);
+    left: -100%;
+  }
 
+  to {
+    transform: scale(1) rotateY(0deg);
+    left: 0;
+  }
+}
+@keyframes popping-up-width {
+  from {
+    width: 0%;
+    height: 0%;
+    padding: 0;
+    margin-top: 0;
+  }
+  1%{
+    height: auto;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+.msg {
+  &--1 {
+    animation-delay: calc(var(--local-delay) + 0s);
+  }
+  &--2 {
+    animation-delay: calc(1 * var(--local-time-response) + var(--local-delay));
+  }
+  &--3 {
+    animation-delay: calc(2 * var(--local-time-response) + var(--local-delay));
+  }
+  &--4 {
+    animation-delay: calc(3 * var(--local-time-response) + var(--local-delay));
+  }
+  &--5 {
+    animation-delay: calc(4 * var(--local-time-response) + var(--local-delay));
+  }
+  &--6 {
+    animation-delay: calc(5 * var(--local-time-response) + var(--local-delay));
+  }
+  &--7 {
+    animation-delay: calc(6 * var(--local-time-response) + var(--local-delay));
+  }
+  &--8 {
+    animation-delay: calc(7 * var(--local-time-response) + var(--local-delay));
+  }
+}
