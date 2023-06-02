@@ -34,6 +34,7 @@
     border-radius: 1.25rem;
     background: $c-Light-Grayish-Violet;
     overflow: hidden;
+    //border-block: 0.6875rem solid red;
   }
 }
 //------- drawing the app
@@ -149,7 +150,7 @@
     line-height: 0.6875rem;
     position: relative;
     overflow: hidden;
-    animation: .7s ease-out backwards popping-up-width;
+    animation: 0.7s ease-out backwards popping-up-width;
     &--left {
       margin-right: auto;
       border-bottom-left-radius: 0.25rem;
