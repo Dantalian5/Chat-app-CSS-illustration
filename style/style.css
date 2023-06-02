@@ -321,7 +321,6 @@ body {
   z-index: 2;
   flex-direction: column-reverse;
   padding: 0.625rem 0.4688rem;
-  counter-reset: reversed(msg);
 }
 .app__msg {
   max-width: -moz-fit-content;
