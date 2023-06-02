@@ -2,43 +2,38 @@
 //---drawing the phone------
 .phone {
   font-family: $font-family-rubik;
-  width: fit-content;
-  max-width: fit-content;
-  &__outer {
-    position: relative;
-    width: 15.4375rem;
-    height: 31.5625rem;
-    border-radius: 1.875rem;
+  position: relative;
+  width: 15.4375rem;
+  height: 31.5625rem;
+  border: solid $c-white;
+  border-width: 0.6875rem 0.5938rem;
+  border-radius: 1.875rem;
+  box-shadow: 0rem 1.875rem 3.75rem -0.625rem rgba(62, 39, 83, 0.251202);
+  background: $c-Light-Grayish-Violet;
+  z-index: 0;
+  animation: 2s backwards shrinkin;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 8.0625rem;
+    height: 1.125rem;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    border-radius: 0rem 0rem 0.875rem 0.875rem;
     background: $c-white;
-    box-shadow: 0rem 1.875rem 3.75rem -0.625rem rgba(62, 39, 83, 0.251202);
-    padding: 0.6875rem 0.5938rem;
-    z-index: 0;
-    &::after {
-      content: "";
-      position: absolute;
-      width: 8.0625rem;
-      height: 1.8125rem;
-      top: 0;
-      left: 50%;
-      transform: translate(-50%, 0);
-      border-radius: 0rem 0rem 0.875rem 0.875rem;
-      background: $c-white;
-      z-index: 10;
-    }
-  }
-  &__inner {
-    width: 100%;
-    height: 100%;
-    border-radius: 1.25rem;
-    background: $c-Light-Grayish-Violet;
-    overflow: hidden;
+    z-index: 10;
   }
 }
 //------- drawing the app
 .app {
   height: 100%;
   position: relative;
+  border: 1px solid $c-Light-Grayish-Violet;
+  border-radius: 1.25rem;
+  overflow: hidden;
   &__header {
+    overflow: hidden;
     position: absolute;
     inset: 0 0 auto 0;
     height: 4.125rem;
@@ -51,7 +46,7 @@
     border-radius: 0 0 0.375rem 0.375rem;
     z-index: 5;
     padding: 1.875rem 1rem 0rem 1rem;
-    isolation: isolate;
+    animation: 2s backwards enterin-top;
     &::after {
       content: "";
       position: absolute;
@@ -61,7 +56,7 @@
         0deg,
         rgba($c-Light-Grayish-Violet, 0) 0%,
         rgba($c-Light-Grayish-Violet, 1) 100%
-      ); 
+      );
     }
     &__wrapper {
       align-items: center;
@@ -132,17 +127,21 @@
     height: 100%;
     z-index: 2;
     flex-direction: column-reverse;
-    overflow: hidden;
     padding: 0.625rem 0.4688rem;
+    counter-reset: reversed(msg);
   }
   &__msg {
-    width: fit-content;
+    max-width: fit-content;
+    max-height: min-content;
     padding: 0.375rem 0.5rem;
     border-radius: 0.625rem;
     margin-top: 0.5rem;
     font-size: 0.5rem;
     font-weight: 400;
     line-height: 0.6875rem;
+    position: relative;
+    overflow: hidden;
+    animation: 0.7s ease-out backwards popping-up-width;
     &--left {
       margin-right: auto;
       border-bottom-left-radius: 0.25rem;
@@ -169,6 +168,7 @@
       );
     }
     &__text {
+      width: max-content;
       max-width: 7rem;
     }
     &__form {
@@ -212,6 +212,9 @@
     align-items: center;
     padding: 0.25rem;
     margin-top: 0.5rem;
+    animation: 2s 1s backwards growin;
+    position: relative;
+    overflow: hidden;
     &__text {
       margin-left: 1rem;
       font-size: 0.5625rem;
@@ -219,6 +222,7 @@
       line-height: 120%;
       letter-spacing: -0.006em;
       color: $c-Grayish-Blue;
+      min-width: max-content;
     }
     &__button {
       margin-left: auto;
@@ -226,7 +230,8 @@
       height: 1.5625rem;
       border-radius: 50%;
       background: $c-Very-Dark-Desaturated-Violet;
-      position: relative;
+      position: absolute;
+      right: 4px;
       &::before,
       &::after {
         content: "";
