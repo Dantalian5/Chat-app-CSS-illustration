@@ -1,3 +1,24 @@
+/* Import the font using @font-face */
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/assets/fonts/Rubik-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  src: url("/assets/fonts/Rubik-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/assets/fonts/Rubik-Bold.ttf") format("truetype");
+}
+$font-family-rubik: "Rubik", sans-serif;
+
 $c-Pale-Violet: hsl(276, 100%, 81%);
 $c-Moderate-Violet: hsl(276, 55%, 52%);
 $c-Desaturated-Dark-Violet: hsl(271, 15%, 43%);
@@ -12,10 +33,9 @@ $-black: hsl(0, 0%, 0%);
 $c-Light-Grayish-Violet: hsl(270, 20%, 96%);
 $c-Very-Dark-Desaturated-Violet: hsl(271, 36%, 24%);
 $c-Very-Light-Magenta: hsl(289, 100%, 72%);
-$font-family-rubik: 'Rubik', sans-serif;
 
-body{
-    min-height: 100vh;
-    min-height: 100svh;
-    background-color: $c-ghost-white;
+body {
+  min-height: 100vh;
+  min-height: 100svh;
+  background-color: $c-ghost-white;
 }

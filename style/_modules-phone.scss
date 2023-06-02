@@ -2,45 +2,36 @@
 //---drawing the phone------
 .phone {
   font-family: $font-family-rubik;
-  width: fit-content;
-  max-width: fit-content;
   position: relative;
+  width: 15.4375rem;
+  height: 31.5625rem;
+  border: solid $c-white;
+  border-width: 0.6875rem 0.5938rem;
+  border-radius: 1.875rem;
+  box-shadow: 0rem 1.875rem 3.75rem -0.625rem rgba(62, 39, 83, 0.251202);
+  background: $c-Light-Grayish-Violet;
+  z-index: 0;
   animation: 2s backwards shrinkin;
-  &__outer {
-    position: relative;
-    width: 15.4375rem;
-    height: 31.5625rem;
-    border-radius: 1.875rem;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 8.0625rem;
+    height: 1.125rem;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    border-radius: 0rem 0rem 0.875rem 0.875rem;
     background: $c-white;
-    box-shadow: 0rem 1.875rem 3.75rem -0.625rem rgba(62, 39, 83, 0.251202);
-    padding: 0.6875rem 0.5938rem;
-    z-index: 0;
-    &::after {
-      content: "";
-      position: absolute;
-      width: 8.0625rem;
-      height: 1.8125rem;
-      top: 0;
-      left: 50%;
-      transform: translate(-50%, 0);
-      border-radius: 0rem 0rem 0.875rem 0.875rem;
-      background: $c-white;
-      z-index: 10;
-    }
-  }
-  &__inner {
-    width: 100%;
-    height: 100%;
-    border-radius: 1.25rem;
-    background: $c-Light-Grayish-Violet;
-    overflow: hidden;
-    //border-block: 0.6875rem solid red;
+    z-index: 10;
   }
 }
 //------- drawing the app
 .app {
   height: 100%;
   position: relative;
+  border: 1px solid $c-Light-Grayish-Violet;
+  border-radius: 1.25rem;
+  overflow: hidden;
   &__header {
     overflow: hidden;
     position: absolute;
@@ -52,7 +43,7 @@
       $c-g-Light-Violet 100%
     );
     box-shadow: 0rem 0rem 0.8125rem rgba(62, 39, 83, 0.251202);
-    border-radius: 1.25rem 1.25rem 0.375rem 0.375rem;
+    border-radius: 0 0 0.375rem 0.375rem;
     z-index: 5;
     padding: 1.875rem 1rem 0rem 1rem;
     animation: 2s backwards enterin-top;
