@@ -84,6 +84,25 @@ input {
   outline: none;
 }
 
+/* Import the font using @font-face */
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/assets/fonts/Rubik-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  src: url("/assets/fonts/Rubik-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/assets/fonts/Rubik-Bold.ttf") format("truetype");
+}
 body {
   min-height: 100vh;
   min-height: 100svh;
@@ -184,7 +203,6 @@ body {
 .phone {
   font-family: "Rubik", sans-serif;
   position: relative;
-  animation: 2s backwards shrinkin;
   width: 15.4375rem;
   height: 31.5625rem;
   border: solid hsl(0, 0%, 100%);
@@ -192,8 +210,8 @@ body {
   border-radius: 1.875rem;
   box-shadow: 0rem 1.875rem 3.75rem -0.625rem rgba(62, 39, 83, 0.251202);
   background: hsl(270, 20%, 96%);
-  overflow: hidden;
   z-index: 0;
+  animation: 2s backwards shrinkin;
 }
 .phone::before {
   content: "";
@@ -211,6 +229,8 @@ body {
 .app {
   height: 100%;
   position: relative;
+  border: 1px solid hsl(270, 20%, 96%);
+  border-radius: 1.25rem;
   overflow: hidden;
 }
 .app__header {
@@ -427,19 +447,18 @@ body {
   margin-bottom: 0.5rem;
 }
 
-/* :root {
+:root {
   --local-delay: 3s;
   --local-time-response: 0.7s;
 }
+
 @keyframes shrinkin {
   from {
     transform: scale(3);
     left: -400%;
   }
-
   to {
     transform: scale(1);
-    //top: 0;
     left: 0;
   }
 }
@@ -447,7 +466,6 @@ body {
   from {
     top: -100%;
   }
-
   to {
     top: 0;
   }
@@ -456,7 +474,6 @@ body {
   from {
     width: 1.9375rem;
   }
-
   to {
     width: 100%;
   }
@@ -466,7 +483,6 @@ body {
     transform: scale(2) rotateY(-90deg);
     left: -100%;
   }
-
   to {
     transform: scale(1) rotateY(0deg);
     left: 0;
@@ -482,35 +498,31 @@ body {
   1% {
     height: auto;
   }
-
   to {
     width: 100%;
   }
 }
-.msg {
-  &--1 {
-    animation-delay: calc(var(--local-delay) + 0s);
-  }
-  &--2 {
-    animation-delay: calc(1 * var(--local-time-response) + var(--local-delay));
-  }
-  &--3 {
-    animation-delay: calc(2 * var(--local-time-response) + var(--local-delay));
-  }
-  &--4 {
-    animation-delay: calc(3 * var(--local-time-response) + var(--local-delay));
-  }
-  &--5 {
-    animation-delay: calc(4 * var(--local-time-response) + var(--local-delay));
-  }
-  &--6 {
-    animation-delay: calc(5 * var(--local-time-response) + var(--local-delay));
-  }
-  &--7 {
-    animation-delay: calc(6 * var(--local-time-response) + var(--local-delay));
-  }
-  &--8 {
-    animation-delay: calc(7 * var(--local-time-response) + var(--local-delay));
-  }
+.msg--1 {
+  animation-delay: calc(var(--local-delay) + 0s);
 }
- *//*# sourceMappingURL=style.css.map */
+.msg--2 {
+  animation-delay: calc(1 * var(--local-time-response) + var(--local-delay));
+}
+.msg--3 {
+  animation-delay: calc(2 * var(--local-time-response) + var(--local-delay));
+}
+.msg--4 {
+  animation-delay: calc(3 * var(--local-time-response) + var(--local-delay));
+}
+.msg--5 {
+  animation-delay: calc(4 * var(--local-time-response) + var(--local-delay));
+}
+.msg--6 {
+  animation-delay: calc(5 * var(--local-time-response) + var(--local-delay));
+}
+.msg--7 {
+  animation-delay: calc(6 * var(--local-time-response) + var(--local-delay));
+}
+.msg--8 {
+  animation-delay: calc(7 * var(--local-time-response) + var(--local-delay));
+}/*# sourceMappingURL=style.css.map */

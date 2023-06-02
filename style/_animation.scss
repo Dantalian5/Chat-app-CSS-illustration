@@ -1,4 +1,4 @@
-/* :root {
+:root {
   --local-delay: 3s;
   --local-time-response: 0.7s;
 }
@@ -84,4 +84,3 @@
     animation-delay: calc(7 * var(--local-time-response) + var(--local-delay));
   }
 }
- */
